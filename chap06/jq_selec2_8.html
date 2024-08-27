@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    $(function () {
+        let arr1 = [{
+            "area": "서울",
+            "name": "무대리"
+        }, {
+            "area": "부산",
+            "name": "홍과장"
+        }, {
+            "area": "서울",
+            "name": "빅마마"
+        }]
+
+        let arr2 = $.map(arr1, function (a, b, c) {
+            if (a.area == "서울") {
+                console.log(a);
+                console.log(b);
+                console.log(c);
+                return a;
+            }
+        });
+
+        console.log(arr2);
+        console.log("=====End=====");
+
+        let arr3 = $.grep(arr1, function (a, b) {
+            if (a.area == "서울") {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        console.log(arr3);
+    });
+</script>
+</html>

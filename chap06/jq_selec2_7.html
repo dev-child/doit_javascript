@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<h1>탐색 선택자</h1>
+<ul id="menu1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ul id="menu2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+<script>
+    $(function () {
+        let obj = [{
+            "area": "서울"
+        }, {
+            "area": "부산"
+        }, {
+            "area": "전주"
+        }
+        ]
+
+        $(obj).each(function (i, o) {
+            console.log(i + ":" , o);
+        });
+
+        console.log("=====The End=====")
+
+        $.each($("#menu2 li"), function (i, o) {
+            console.log(i + ":", o);
+        });
+
+        console.log("=====The End=====")
+
+        $.each($("#menu2 li"), function (i) {
+            console.log(i + ":", $(this));
+        });
+
+    });
+</script>
+</html>

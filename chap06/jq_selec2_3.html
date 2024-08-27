@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<h1>h1</h1>
+<ul id="menu">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $("#menu li").eq(2).css({
+            "background-color": "#ff0"
+        })
+
+        $("#menu li:lt(2)").css({
+            "background-color":"#0ff"
+        })
+
+        $("#menu li:gt(2)").css({
+            "background-color": "#0f0"
+        })
+    });
+</script>
+</html>
